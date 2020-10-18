@@ -14,7 +14,7 @@
                 {{#unless devoured}}
                 <li>
                     <button class="eatBtn btn btn-danger" id="{{id}}">Devour It!</button>
-                    {{burger_name}}
+                    {{burger}}
                 </li>
                 {{/unless}}
                 {{/each}}
@@ -27,7 +27,7 @@
                 {{#each burger}}
                 {{#if devoured}}
                 <li>
-                    {{burger_name}}
+                    {{burger}}
                 </li>
                 {{/if}}
                 {{/each}}

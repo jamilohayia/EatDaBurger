@@ -11,7 +11,7 @@ router.get("/", function(req, res) {
     var burgerObj = {
       burger: data
     };
-    console.log(burgerObj);
+    console.log(burgerObj, "something");
     res.render("index", burgerObj);
   });
 });
@@ -19,7 +19,9 @@ router.get("/", function(req, res) {
 router.post("/api/burgers", function(req, res) {
   burger.insertOne(req.body.name, function(result) {
     // Send back the ID of the new quote
+    console.log(req.body,"new burger")
     res.json({ id: result.insertId });
+    
   });
 });
 
